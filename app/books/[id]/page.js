@@ -1,8 +1,10 @@
+export const dynamic = 'force-dynamic'; 
+
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export const dynamic = 'force-dynamic'; 
+
 
 // Fetch a single book by ID
 async function getBook(id) {
