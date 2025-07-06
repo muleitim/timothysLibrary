@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
 
             <div className="d-flex flex-column flex-lg-row align-items-right justify-content-end gap-2 w-100 ">            
 
-              <button className="btn btn-link btnBorderColor nav-link text-white navBarSpacing" onClick={toggleTheme} title="Toggle theme">
+              <button className="btn btn-link btnBorderColor w-auto nav-link text-white navBarSpacing" onClick={toggleTheme} title="Toggle theme">
                     {theme === 'light' ? 'Theme 🌙' : 'Theme ☀️'}
               </button>
 
