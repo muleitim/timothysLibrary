@@ -1,0 +1,108 @@
+.limeColor
+{
+    color: lime;
+}
+
+.bodyColor
+{
+    background-color: #cbd5e1;
+}
+
+.bodyPadding
+{
+    padding-top: 56px;
+}
+
+.rightBorder
+{
+    border-right: 2px solid #0d6efd;
+}
+
+.navColorLight
+{
+    /* background-color: #17212e; */
+    background-color: #1e293b;
+}
+
+.navColorDark
+{
+    /* background-color: #17212e; */
+    /* background-color: #0d6efd; */
+    /* background-color: #198754; */
+    background-color: black; 
+}
+
+.sidebarColor 
+{
+    background-color: pink;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.mainColor
+{
+    background-color: rgb(184, 216, 216);
+}
+
+.mainBorderLight 
+{
+    /* background-color: #1e293b; */
+    border-left: 4px solid #1e293b;
+}
+
+.mainBorderDark 
+{
+    /* border-left: 4px solid #0d6efd; */
+    
+    border-left: 4px solid black;
+}
+
+.navLinkColorLight 
+{
+    color: navy;
+    font-weight: bold;
+}
+
+.navLinkColorDark
+{
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.navBarSpacing
+{
+ margin-right: 4px;
+}
+
+.banner 
+{
+    background: url('/images/librarybanner.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.redBorder 
+{
+    border: 1px solid red;
+
+}
+
+.blueBorder 
+{
+    border: 1px solid blue;
+}
+
+.descriptionLight
+{
+    background-color: #dddada;
+}
+
+
