@@ -2,11 +2,10 @@
 import clientPromise from '@/lib/mongodb';
 import { ObjectId } from 'mongodb';
 
-
-// addition
+// GET a book by ID
 export async function GET(_, { params }) {
   try {
-    const {id} = await params;
+    const { id } = params; // ✅ FIXED (removed 'await')
     const client = await clientPromise;
     const db = client.db();
 
@@ -20,15 +19,12 @@ export async function GET(_, { params }) {
   }
 }
 
-// end of addition
-
-
+// UPDATE a book by ID
 export async function PUT(req, { params }) {
   try {
-    const { id } = await params;
+    const { id } = params; // ✅ FIXED (removed 'await')
     const body = await req.json();
 
-    // Create a copy of body and remove _id if it exists
     const { _id, ...updateData } = body;
 
     const client = await clientPromise;
@@ -50,16 +46,17 @@ export async function PUT(req, { params }) {
       status: 200,
     });
   } catch (error) {
-    console.log(`\nError:\n${error}\n`);
+    console.error('PUT error:', error);
     return new Response(JSON.stringify({ error: 'Failed to update book' }), {
       status: 500,
     });
   }
 }
 
+// DELETE a book by ID
 export async function DELETE(_, { params }) {
   try {
-    const id = params.id;
+    const { id } = params; // ✅ FIXED (consistency)
     const client = await clientPromise;
     const db = client.db();
 
@@ -69,7 +66,7 @@ export async function DELETE(_, { params }) {
       status: 200,
     });
   } catch (error) {
-    console.log(`\nError:\n${error}\n`);
+    console.error('DELETE error:', error);
     return new Response(JSON.stringify({ error: 'Failed to delete book' }), {
       status: 500,
     });
