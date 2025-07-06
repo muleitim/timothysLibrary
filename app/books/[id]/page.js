@@ -1,10 +1,8 @@
-export const dynamic = 'force-dynamic'; 
+export const dynamic = 'force-dynamic'; // Ensure dynamic rendering
 
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-
-
 
 // Fetch a single book by ID
 async function getBook(id) {
@@ -22,7 +20,9 @@ async function getBook(id) {
 }
 
 export default async function BookDetails({ params }) {
-  const book = await getBook(params.id);
+  const { id } = params; // ✅ Extract first before using
+
+  const book = await getBook(id); // ✅ Safe use
 
   if (!book) {
     return notFound();
@@ -61,10 +61,7 @@ export default async function BookDetails({ params }) {
       {/* Description */}
       <div className="mt-5">
         <h4>Description</h4>
-        <div
-          className={`border rounded p-3 `}
-          style={{ whiteSpace: 'pre-line' }}
-        >
+        <div className="border rounded p-3" style={{ whiteSpace: 'pre-line' }}>
           {book.description}
         </div>
       </div>
