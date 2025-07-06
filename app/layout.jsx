@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`bodyPadding ${theme === 'light' ? 'bodyColor' : ''} `} >
         {/* Top Navbar */}
-        <nav className={`navbar navbar-expand-lg navbar-dark px-3 navTextColor fixed-top ${theme === 'light' ? 'navColorLight' : 'navColorDark'} `} >
+        <nav className={`navbar navbar-expand-lg navbar-dark px-3 fixed-top ${theme === 'light' ? 'navColorLight' : 'navColorDark'} `} >
           <Link prefetch={false} className="navbar-brand navTextColor" href={"/"}>Timothy's Library</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span className="navbar-toggler-icon"></span>
@@ -72,9 +72,11 @@ export default function RootLayout({ children }) {
 
             <div className="d-flex flex-column flex-lg-row align-items-right justify-content-end gap-2 w-100 ">            
 
-              <button className="btn btn-link btnBorderColor w-auto nav-link text-white navBarSpacing" onClick={toggleTheme} title="Toggle theme">
+             
+              
+              <span style={{ cursor: "pointer", color: "white" }}  onClick={toggleTheme} title="Toggle theme">
                     {theme === 'light' ? 'Theme 🌙' : 'Theme ☀️'}
-              </button>
+              </span>
 
               
 

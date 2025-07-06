@@ -122,3 +122,8 @@ html, body {
     padding: 2px;
     background-color: rgba(0, 255, 0, 0.158);
 }
+
+.themeWidth
+{
+    width: "2em";
+}
