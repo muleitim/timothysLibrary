@@ -105,4 +105,20 @@ html, body {
     background-color: #dddada;
 }
 
+.navTextColor
+{
+    color: lime;
+}
 
+.btnBorderColor
+{
+    border: 1px solid lime;
+    padding: 2px;
+}
+
+.btnBorderColor:hover
+{
+    border: 1px solid lime;
+    padding: 2px;
+    background-color: rgba(0, 255, 0, 0.158);
+}

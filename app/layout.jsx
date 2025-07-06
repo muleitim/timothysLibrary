@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`bodyPadding ${theme === 'light' ? 'bodyColor' : ''} `} >
         {/* Top Navbar */}
-        <nav className={`navbar navbar-expand-lg navbar-dark px-3 fixed-top ${theme === 'light' ? 'navColorLight' : 'navColorDark'} `} >
-          <Link prefetch={false} className="navbar-brand" href={"/"}>Timothy's Library</Link>
+        <nav className={`navbar navbar-expand-lg navbar-dark px-3 navTextColor fixed-top ${theme === 'light' ? 'navColorLight' : 'navColorDark'} `} >
+          <Link prefetch={false} className="navbar-brand navTextColor" href={"/"}>Timothy's Library</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -70,11 +70,9 @@ export default function RootLayout({ children }) {
               </li> 
             </ul>
 
-            <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-lg-end gap-2 w-100">
+            <div className="d-flex flex-column flex-lg-row align-items-right justify-content-end gap-2 w-100 ">            
 
-            
-
-              <button className="btn btn-link nav-link text-white navBarSpacing mt-2" onClick={toggleTheme} title="Toggle theme">
+              <button className="btn btn-link btnBorderColor nav-link text-white navBarSpacing" onClick={toggleTheme} title="Toggle theme">
                     {theme === 'light' ? 'Theme 🌙' : 'Theme ☀️'}
               </button>
 
@@ -89,10 +87,10 @@ export default function RootLayout({ children }) {
               </SignedOut>
 
               <SignedIn>
-              <div className="ms-auto">
-                <UserButton />
-              </div>
-            </SignedIn>
+                <div className="">
+                  <UserButton />
+                </div>
+              </SignedIn>
 
             </div>
 
